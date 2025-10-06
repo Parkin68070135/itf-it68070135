@@ -1,22 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ITF 2025</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <nav>
-        <p>68070185</p>
-        <h2>ITF Website</h2>
-        <p>Week 14</p>
+      <p>68070135</p>
+      <h2>ITF Website</h2>
+      <p>Week 14</p>
     </nav>
-    <div>
-        Enter number: <input type="number" id="myinput" value="0">
-        <button onclick="add()">+1</button>
+
+    <div class="container">
+      <h2 id="my-title">Welcome to my ITF Website!</h2>
+      <img src="./image/Cool.png" width="96" alt="Cool" />
+      <hr />
+
+      <div class="outputt">
+        <textarea id="log_area" rows="8" style="width:100%;" readonly></textarea>
+      </div>
+
+      <div class="box1">
+        <h1>Account Overview</h1>
+        <div class="inbox">
+          <img width="90vh" style="position:absolute;" src="./image/user.png" alt="">
+          <div class="textt" style="position:relative;">
+            <h2>Account Information</h2>
+            Name: Parkin Wilailert
+            <br />
+
+            Type: simply lovely
+            <br />
+          </div>
+        </div>
+        <br>
+        <div class="inbox">
+          <img width="90vh" style="position:absolute;" src="./image/briefcase.png" alt="">
+          <div class="textt" style="position:relative;">
+            <h2>Balance Information</h2>
+            Current Account
+            &nbsp;<input type="number" id="money" name="Current-account" value="1000" />
+            <br />
+
+            Current Cash
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="cash" name="Current-balance" value="1000" />
+            <br />
+
+            <button type="button" onclick="Change()">Change</button>
+          </div>
+        </div>
+        <br/>
+        <div class="inbox">
+          <img width="90vh" style="position:absolute;" src="./image/toolbox.png" alt="">
+          <div class="textt" style="position:relative;">
+            <h2>Bank Operation</h2>
+
+            <select id="selecter">
+              <option value="deposit">Deposit</option>
+              <option value="withdraw">Withdraw</option>
+            </select>
+
+            <input type="number" name="oper_balance" placeholder="amount" value="1000" />
+            <button type="button" onclick="Proceed()">Proceed</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="box2">
+        <h1>Financial Tools</h1>
+
+        <div class="inbox">
+          <img width="90vh" style="position:absolute;" src="./image/coins.png" alt="">
+          <div class="textt" style="position:relative;">
+            Input balance
+            &nbsp;&nbsp;&nbsp;&nbsp;<input type="number" value="1000" />
+            <br />
+            Output balance
+            &nbsp;&nbsp;<input type="number" disabled value="1000" />
+            <br />
+            Input Currency
+            <select id="currency-select">
+              <option value="thb">THB</option>
+              <option value="usd">USD</option>
+            </select>
+            <button type="button">Convert</button>
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+      <!-- <h3>Logs</h3> -->
+      <!-- <textarea id="log_area" rows="8" style="width:100%;" readonly></textarea> -->
     </div>
-    <textarea name="abc" id="abc"></textarea>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
